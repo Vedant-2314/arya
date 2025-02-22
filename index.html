@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
+</head>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body><!-- Music Button -->
+    <audio id="bg-music" src="music.mp3" controls></audio>
+
+    <button onclick="playMusic()">Play Music 🎶</button>
+    
+    <!-- JavaScript for Music -->
+    <script>
+        function playMusic() {
+            let music = document.getElementById("bg-music");
+            music.play();
+        }
+    </script>
+    
+    <div class="container">
+        <h1>Happy Birthday, sakha! 🎂❤️</h1>
+        <!-- Your Photo -->
+        <img src="your-photo.jpg" alt="Our Photo" class="main-photo">
+        
+        <!-- Play Music Button -->
+         
+
+        <!-- Surprise Section -->
+        <div class="surprise">
+            <h2>Will you be mine forever? ❤️</h2>
+            <img src="cute-photo.jpg" alt="Cute Photo" class="proposal-photo">
+            <div class="buttons">
+                <button id="yes" onclick="window.location.href='love-letter.html'">Yes 😍</button>
+
+                <button id="no">No 🙈</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+<!-- Balloon Container -->
+<div id="balloon-container"></div>
+
+<script>
+    function createBalloon() {
+        const balloon = document.createElement("div");
+        balloon.classList.add("balloon");
+
+        // Random balloon position
+        balloon.style.left = Math.random() * 100 + "vw";
+
+        // Random balloon color
+        const colors = ["#ff4d6d", "#ffafcc", "#bde0fe", "#a2d2ff", "#ffcc00"];
+        balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+        document.getElementById("balloon-container").appendChild(balloon);
+
+        // Remove balloon after animation
+        setTimeout(() => { balloon.remove(); }, 5000);
+    }
+
+    setInterval(createBalloon, 800); // Creates balloons every 800ms
+</script>
+</body>
+
+</body>
+</html>

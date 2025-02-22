@@ -1,0 +1,124 @@
+/* 🎨 Background & Text Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #ff758c, #ff7eb3); /* Gradient */
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 🎂 Heading Style */
+h1 {
+    font-size: 36px;
+}
+
+/* 📸 Image Styles */
+.main-photo, .proposal-photo {
+    width: 475px; /* Change size here */
+    border-radius: 15px;
+    margin: 34px;
+    border: 3px solid white;
+}
+
+/* 🎁 Surprise Box */
+.surprise {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+/* 🎵 Music & Button Styling */
+button {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: pink;
+}
+
+/* 🚫 Floating No Button */
+#no {
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+#no:hover {
+    transform: translateX(100px) translateY(-50px); /* Moves button away */
+}
+.love-letter {
+    text-align: center;
+    font-size: 24px;
+    color: #ff4d79;
+    font-family: 'Cursive', sans-serif;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* 💌 Love Letter Styling */
+/* Step 1: Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+/* Step 2: Love Letter Styling */
+.love-letter {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;  /* Beautiful Font */
+    font-size: 28px;
+    color: white;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    padding: 50px;
+    border-radius: 20px;
+    margin: 50px auto;
+    width: 80%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Step 3: Balloon Animation */
+@keyframes floatBalloons {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 0.7; }
+    100% { transform: translateY(-10vh) rotate(15deg); opacity: 1; }
+}
+
+/* Apply Animation to Balloons */
+.balloon {
+    position: absolute;
+    animation: floatBalloons 6s infinite ease-in-out;
+}
+
+/* 🎈 Balloon Magic */
+@keyframes floatBalloons {
+    0% { transform: translateY(100vh) scale(0.5); opacity: 0.7; } /* Start at bottom */
+    100% { transform: translateY(-10vh) scale(1); opacity: 1; }  /* Float up */
+}
+
+/* 🎨 Make Balloons Pretty */
+.balloon {
+    position: absolute; /* Can move anywhere */
+    bottom: 0; /* Start at the bottom */
+    width: 40px;
+    height: 50px;
+    border-radius: 50%; /* Make it round */
+    background-color: red; /* Default color */
+    animation: floatBalloons 5s ease-in-out infinite; /* Use the floating animation */
+}
